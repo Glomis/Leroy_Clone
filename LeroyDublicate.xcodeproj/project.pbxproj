@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492F6082262CB86E007517DF /* LimitSaleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492F6081262CB86E007517DF /* LimitSaleScrollView.swift */; };
 		4980272F262AE2F300FBD7FF /* LeroyDublicateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4980272E262AE2F300FBD7FF /* LeroyDublicateApp.swift */; };
 		49802731262AE2F300FBD7FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49802730262AE2F300FBD7FF /* ContentView.swift */; };
 		49802733262AE2FA00FBD7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49802732262AE2FA00FBD7FF /* Assets.xcassets */; };
 		49802736262AE2FA00FBD7FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49802735262AE2FA00FBD7FF /* Preview Assets.xcassets */; };
 		49802743262B873E00FBD7FF /* FirstScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49802742262B873E00FBD7FF /* FirstScroll.swift */; };
+		498CC0CE262C849700175F7F /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CC0CD262C849700175F7F /* RowView.swift */; };
+		498CC0D2262C859900175F7F /* FirstRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498CC0D1262C859900175F7F /* FirstRowView.swift */; };
+		499D1EFA262C8CF9000591DD /* ScrollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499D1EF9262C8CF9000591DD /* ScrollCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		492F6081262CB86E007517DF /* LimitSaleScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitSaleScrollView.swift; sourceTree = "<group>"; };
 		4980272B262AE2F300FBD7FF /* LeroyDublicate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeroyDublicate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4980272E262AE2F300FBD7FF /* LeroyDublicateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeroyDublicateApp.swift; sourceTree = "<group>"; };
 		49802730262AE2F300FBD7FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		49802735262AE2FA00FBD7FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		49802737262AE2FA00FBD7FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49802742262B873E00FBD7FF /* FirstScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScroll.swift; sourceTree = "<group>"; };
+		498CC0CD262C849700175F7F /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
+		498CC0D1262C859900175F7F /* FirstRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRowView.swift; sourceTree = "<group>"; };
+		499D1EF9262C8CF9000591DD /* ScrollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +64,8 @@
 			children = (
 				4980272E262AE2F300FBD7FF /* LeroyDublicateApp.swift */,
 				49802730262AE2F300FBD7FF /* ContentView.swift */,
-				49802742262B873E00FBD7FF /* FirstScroll.swift */,
+				498CC0CC262C844700175F7F /* View */,
+				499D1EFC262C8D15000591DD /* Model */,
 				49802732262AE2FA00FBD7FF /* Assets.xcassets */,
 				49802737262AE2FA00FBD7FF /* Info.plist */,
 				49802734262AE2FA00FBD7FF /* Preview Content */,
@@ -70,6 +79,25 @@
 				49802735262AE2FA00FBD7FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		498CC0CC262C844700175F7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49802742262B873E00FBD7FF /* FirstScroll.swift */,
+				492F6081262CB86E007517DF /* LimitSaleScrollView.swift */,
+				498CC0CD262C849700175F7F /* RowView.swift */,
+				498CC0D1262C859900175F7F /* FirstRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		499D1EFC262C8D15000591DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				499D1EF9262C8CF9000591DD /* ScrollCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				49802743262B873E00FBD7FF /* FirstScroll.swift in Sources */,
+				498CC0D2262C859900175F7F /* FirstRowView.swift in Sources */,
+				499D1EFA262C8CF9000591DD /* ScrollCell.swift in Sources */,
+				492F6082262CB86E007517DF /* LimitSaleScrollView.swift in Sources */,
 				49802731262AE2F300FBD7FF /* ContentView.swift in Sources */,
 				4980272F262AE2F300FBD7FF /* LeroyDublicateApp.swift in Sources */,
+				498CC0CE262C849700175F7F /* RowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
