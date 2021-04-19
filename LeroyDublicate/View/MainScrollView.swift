@@ -7,13 +7,11 @@
 
 import SwiftUI
 
-struct FirstScroll: View {
+struct MainScrollView: View {
     var rows = scrollData
     
     var body: some View {
-        
         ScrollView(.horizontal, showsIndicators: false) {
-            
             HStack(spacing: 20) {
                 FirstRowView()
                 
@@ -21,7 +19,8 @@ struct FirstScroll: View {
                     RowView(name: cell.name, image: cell.icon)
                 }
             }
-                .padding()
+            .padding(.top)
+            .padding(.horizontal)
         }
     }
 }
@@ -30,7 +29,7 @@ struct FirstScroll: View {
 
 struct FirstScroll_Previews: PreviewProvider {
     static var previews: some View {
-        FirstScroll()
+        MainScrollView()
     }
 }
 
