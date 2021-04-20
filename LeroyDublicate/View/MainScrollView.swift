@@ -16,7 +16,7 @@ struct MainScrollView: View {
                 FirstRowView()
                 
                 ForEach(rows) { cell in
-                    RowView(name: cell.name, image: cell.icon)
+                    RowView(scrollCell: cell)
                 }
             }
             .padding(.top)

@@ -9,56 +9,59 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
-            VStack {
-                NavigationBar()
-
-                ScrollView(.vertical) {
-                    MainScrollView()
-                        
-                    NameLine(title: "Предложеие ограничено")
-                        
-                    SacondaryScrollView()
+            TabView {
+                NavigationView {
+                VStack {
+                    NavigationBar()
                     
-                    NameLine(title: "Лучшая цена")
-                    
-                    SacondaryScrollView(fromData: bestPriceScrollData)
-
-                    // Delete when add offsets
-                    VStack{}
-                        .frame(height: 100)
+                    ScrollView(.vertical) {
+                        MainScrollView()
+                        
+                        NameLine(title: "Предложеие ограничено")
+                        
+                        SacondaryScrollView()
+                        
+                        NameLine(title: "Лучшая цена")
+                        
+                        SacondaryScrollView(fromData: bestPriceScrollData)
+                        
+                        // Delete when add offsets
+                        VStack{}
+                            .frame(height: 100)
+                    }
+                    .ignoresSafeArea(.all)
                 }
+                
+                .navigationBarHidden(true)
+                .edgesIgnoringSafeArea([.top, .bottom])
             }
-            .ignoresSafeArea(.all)
-            .tabItem {
-                Image(systemName: "magnifyingglass")
-                Text("Главная")
-        }
-            
-            
-            Text("Мой список")
                 .tabItem {
-                    Image(systemName: "scroll")
-                    Text("Мой список")
+                    Image(systemName: "magnifyingglass")
+                    Text("Главная")
                 }
-            
-            Text("Магазин")
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Магазин")
-                }
-            
-            Text("Профиль")
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Профиль")
-                }
-            
-            Text("Корзина")
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("Корзина")
-                }
+                Text("Мой список")
+                    .tabItem {
+                        Image(systemName: "scroll")
+                        Text("Мой список")
+                    }
+                
+                Text("Магазин")
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Магазин")
+                    }
+                
+                Text("Профиль")
+                    .tabItem {
+                        Image(systemName: "person")
+                        Text("Профиль")
+                    }
+                
+                Text("Корзина")
+                    .tabItem {
+                        Image(systemName: "cart")
+                        Text("Корзина")
+                    }
         }
     }
 }

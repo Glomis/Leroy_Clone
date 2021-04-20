@@ -9,29 +9,29 @@ import SwiftUI
 
 struct BigScrollCell: View {
     
-    var cellImage = "drill"
-    var price = "730"
-    var discription = "Прекрасное сверло, делает моментальные дыры в стене."
+    var cell: BigCell = BigCell(image: "drill", price: "730", discription: "Описание")
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Image(cellImage)
+            Image(cell.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 130, height: 100)
                 .padding(.horizontal, 10)
             
             HStack(spacing: 3) {
-                Text(price)
+                Text(cell.price)
                     .fontWeight(.semibold)
                 Text("₽ / шт.")
                     .font(.caption)
                     .fontWeight(.medium)
             }
+            .foregroundColor(.black)
             .padding(.horizontal)
             
-            Text(discription)
+            Text(cell.discription)
                 .font(.footnote)
+                .foregroundColor(.black)
                 .lineLimit(2)
                 .padding(.horizontal)
         }

@@ -14,7 +14,9 @@ struct SacondaryScrollView: View {
         ScrollView(.horizontal) {
             HStack(spacing: 10) {
                 ForEach(fromData) { cell in
-                    BigScrollCell(cellImage: cell.image, price: cell.price, discription: cell.discription)
+                    NavigationLink(destination: ProductDitalView(product: cell)){
+                        BigScrollCell(cell: cell)
+                    }
                 }
             }
             .padding(.leading)

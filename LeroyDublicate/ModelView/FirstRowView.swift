@@ -9,15 +9,15 @@ import SwiftUI
 
 struct FirstRowView: View {
     
-    var name = "Каталог"
-    var image = "list.dash"
-    var color = Color(#colorLiteral(red: 0.295571463, green: 0.7855085378, blue: 0.1472125314, alpha: 1))
-    var nameColor = Color.white
+    var backColor = Color(#colorLiteral(red: 0.295571463, green: 0.7855085378, blue: 0.1472125314, alpha: 1))
+    var textColor = Color.white
+    var firstRow: ScrollCell = ScrollCell(name: "Каталог",
+                                          icon: "list.dash")
     
     var body: some View {
         VStack {
             HStack {
-                Text(name)
+                Text(firstRow.name)
                     .font(.headline)
                     .fontWeight(.semibold)
                 Spacer()
@@ -28,15 +28,15 @@ struct FirstRowView: View {
             
             HStack {
                 Spacer()
-                Image(systemName: image)
+                Image(systemName: firstRow.icon)
                     .font(.largeTitle)
                     .scaleEffect(1.2)
             }
             .padding()
         }
         .frame(width: 120, height: 120)
-        .foregroundColor(nameColor)
-        .background(color)
+        .foregroundColor(textColor)
+        .background(backColor)
         .cornerRadius(5)
     }
 }

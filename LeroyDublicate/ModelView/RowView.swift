@@ -9,13 +9,12 @@ import SwiftUI
 
 struct RowView: View {
     
-    var name = "сад"
-    var image = "flower1"
+    var scrollCell: ScrollCell = ScrollCell(name: " Cад", icon: "flower1")
     
     var body: some View {
         VStack {
             HStack {
-                Text(name)
+                Text(scrollCell.name)
                     .font(.headline)
                     .fontWeight(.semibold)
                     .lineLimit(2)
@@ -29,7 +28,7 @@ struct RowView: View {
             
             HStack {
                 Spacer()
-                Image(image)
+                Image(scrollCell.icon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .font(.largeTitle)
